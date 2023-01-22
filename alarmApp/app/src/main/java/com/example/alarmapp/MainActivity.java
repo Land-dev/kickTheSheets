@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.view.View;
+import android.view.Window;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
